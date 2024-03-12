@@ -18,11 +18,14 @@ select * from product_positioning;
 -- What is the average price of the products?
 select round(avg(price),2) as price, round(avg(competitors_price),2) as competitors_price from product_positioning;
 
+
 -- What is the highest and lowest sales volume?
 select max(sales_volume) as max_sales_vol, min(sales_volume) as min_sales_vol from product_positioning;
 
+
 -- What is the count of each product position?
 select product_position, count(product_position) from product_positioning group by product_position order by count(product_position) desc; 
+
 
 -- How does seasonal affect sales volume and price?
 select seasonal, round(avg(sales_volume)) as avg_sales_vol,
@@ -38,6 +41,7 @@ select product_category, round(avg(sales_volume)) as avg_sales_vol
 from product_positioning
 group by product_category
 order by avg_sales_vol desc;
+
 
 -- Finding the minimum and maximum price in each product position and the range of price in each position.
 select product_position, 
@@ -66,7 +70,6 @@ order by high_foot_traffic desc;
 
 
 -- Finding the count of each foot traffic category in each consumer demographic.
-
 select consumer_demographic,
 	sum(case when foot_traffic = 'High' then 1 else 0 end) as high_foot_traffic,
 	sum(case when foot_traffic = 'Medium' then 1 else 0 end) as medium_foot_traffic,
@@ -75,12 +78,14 @@ from product_positioning
 group by consumer_demographic
 order by high_foot_traffic desc;
 
+
 -- Finding the most frequent product position a promotion will be applied.
 select  product_position, count(*) as promotion_count
 from product_positioning
 where promotion = 'Yes'
 group by product_position
 order by promotion_count desc;
+
 
 -- Finding how the product position affects where the promotions are applied.
 select product_position, count(*) as promotion_count
@@ -95,6 +100,7 @@ select consumer_demographic, sum(sales_volume) as total_num_sales
 from product_positioning
 group by consumer_demographic
 order by total_num_sales desc;
+
 
 -- Finding the 10 highest earning products, and the conditions in which these are met.
 select 
