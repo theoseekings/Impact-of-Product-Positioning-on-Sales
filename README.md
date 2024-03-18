@@ -5,6 +5,7 @@ The aim of this project was to conduct an analysis of retail sales data using a 
 Dataset Description:
 
 Product ID: Unique identifiers assigned to each product.
+
 Product Position: The strategic placement of products within the store, such as aisle or end-cap.
 Price: The listed price of each product.
 Competitor's Price: Comparative pricing information from competitor stores.
