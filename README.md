@@ -7,11 +7,19 @@ Dataset Description:
 Product ID: Unique identifiers assigned to each product.
 
 Product Position: The strategic placement of products within the store, such as aisle or end-cap.
+
 Price: The listed price of each product.
+
 Competitor's Price: Comparative pricing information from competitor stores.
+
 Promotion: An indicator denoting whether the product is currently under promotion.
+
 Foot Traffic: Categorized foot traffic levels within the store, ranging from Low to High.
+
 Consumer Demographics: Insights into consumer profiles, including categories like Families or Students.
+
 Product Category: Classifications of products into categories like Clothing or Electronics.
+
 Seasonal: Indicators for seasonal products.
+
 Sales Volume: Quantitative measures of product sales.
